@@ -1,0 +1,71 @@
+body{
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+p{
+    text-align: justify;
+    text-indent: 20px;
+}
+
+article h1{
+    font-size: 15px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 5px;
+    margin: 0px;
+}
+
+article h2{
+    font-size: 13px;
+    color: #888888;
+    margin: 0px;
+}
+
+article{
+    margin-bottom: 800px;
+}
+
+.img-dir{
+    display: block;
+    float: right;
+    margin-left: 5px;
+}
+
+#frame-quest{
+    width: 1000px;
+    height: 600px;
+    border: none;
+    scroll-padding: unset;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#frame-quest::-webkit-scrollbar{
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+#tabelaq1{
+    margin: 0 auto;
+}
+
+#dados-pessoais h1{
+    text-align: center;
+}
+
+input, select{
+    width: 250px;
+}
+
+h1{
+    text-align: center;
+}
+
+table td:last-child{
+    width: 10px;
+}
+
+article#dados-pessoais table#tabelaq1 td.cd#td-chata{
+    display: block;
+}

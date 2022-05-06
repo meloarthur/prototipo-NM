@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lojas Novo Mundo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icone" href="img/logo-nm-com.png" type="image/x-icon">
+    <script lang="javascript" src="js/functions.js"></script>
+    
+</head>
+<body>
+    <h1>Questionário Novo Mundo<br></h1>
+    <article id="dados-pessoais">
+        <header>
+            <h1>Por favor, informe alguns dados sociais:</h1>
+        </header>
+        <table id="tabelaq1">
+            <tr>
+                <td class="ce"><label for="cnasc">Data de Nascimento: <br> </label><input type="date" name="tnasc" id="cnasc"></td>
+                <td class="cc"></td>
+                <td class="cd"><label for="cpais">País de Nascimento: <br> </label><input type="text" name="tpais" id="cpais" size="30" maxlength="30" placeholder="País de Nascimento" value="Brasil"></td>
+            </tr>
+            <tr>
+                <td class="ce">&nbsp;</td>
+                <td class="cc">&nbsp;</td>
+                <td class="cd">&nbsp;</td>
+            </tr>
+            <td class="ce"><label>Sexo: <br> </label>
+                <select name="tsexo" id="isexos">
+                    <option value="X" selected>-</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </td>
+            <td class="cc"></td>
+            <td class="cd"><label for="cuf">UF de Nascimento: <br> </label>
+                <select name="tuf" id="cuf">
+                    <option value="XX" selected>-</option>
+                    
+                </select>
+            </td>
+            <tr>
+                <td class="ce">&nbsp;</td>
+                <td class="cc">&nbsp;</td>
+                <td class="cd">&nbsp;</td>
+            </tr>
+            <td class="ce"><label>Você reside em Goiânia(GO)? <br> </label>
+                <select name="tmora" id="imora">
+                    <option value="X" selected>-</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+            </td>
+            <td class="cc"></td>
+            <td class="cd"><label>Cidade de Nascimento: <br> </label>
+                <select name="tcidade" id="icidade">
+                    <option value="X" selected>-</option>
+                </select>
+            </td>
+            <tr>
+                <td class="ce">&nbsp;</td>
+                <td class="cc">&nbsp;</td>
+                <td class="cd">&nbsp;</td>
+            </tr>
+            <td class="ce"><label>Estado Civil: <br> </label>
+                <select name="testciv" id="iestciv">
+                    <option value="X" selected>-</option>
+                    <option value="S">Solteiro(a)</option>
+                    <option value="C">Casado(a)</option>
+                    <option value="V">Viúvo(a)</option>
+                    <option value="D">Divorciado(a)</option>
+                    <option value="U">União Estável</option>
+                    <option value="N">Prefiro Não Informar</option>
+                </select>
+            </td>
+            <tr>
+                <td class="ce">&nbsp;</td>
+                <td class="cc">&nbsp;</td>
+                <td class="cd">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><label for="">Caso você não resida em Goiânia, informe<br> a cidade onde reside: <br></label><input type="text" name="tcidade2" id="ccidade2" size="30" maxlength="30" placeholder="Nome da cidade onde reside"></td>
+            </tr>
+        </table>
+    </article>
+    <script lang="javascript" src="js/cities.js"></script>
+</body>
+</html>
