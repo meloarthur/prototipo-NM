@@ -3,87 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <title>Lojas Novo Mundo</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="icone" href="img/logo-nm-com.png" type="image/x-icon">
-    <script lang="javascript" src="js/functions.js"></script>
-    
 </head>
 <body>
-    <h1>Questionário Novo Mundo<br></h1>
-    <article id="dados-pessoais">
-        <header>
-            <h1>Por favor, informe alguns dados sociais:</h1>
-        </header>
-        <table id="tabelaq1">
-            <tr>
-                <td class="ce"><label for="cnasc">Data de Nascimento: <br> </label><input type="date" name="tnasc" id="cnasc"></td>
+    <div id="interface">
+        <h1>Questionário Novo Mundo<br></h1>
+        <article id="dados-pessoais">
+            <header>
+                <h1>Dados Pessoais</h1>
+            </header>
+            <table id="tabelaq1">
+                <tr>
+                    <td class="ce"><label for="cnasc">Data de Nascimento: <br> </label><input type="date" name="tnasc" id="cnasc" class="iteminput"></td>
+                    <td class="cc"></td>
+                    <td class="cd"><label for="cpais">País de Nascimento: <br> </label><input type="text" name="tpais" id="cpais" size="30" maxlength="30" placeholder="País de Nascimento" value="Brasil" class="iteminput"></td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <td class="ce"><label>Sexo: <br> </label>
+                    <select name="tsexo" id="isexos" class="itemselect">
+                        <option value="X" selected>-</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select>
+                </td>
                 <td class="cc"></td>
-                <td class="cd"><label for="cpais">País de Nascimento: <br> </label><input type="text" name="tpais" id="cpais" size="30" maxlength="30" placeholder="País de Nascimento" value="Brasil"></td>
-            </tr>
-            <tr>
-                <td class="ce">&nbsp;</td>
-                <td class="cc">&nbsp;</td>
-                <td class="cd">&nbsp;</td>
-            </tr>
-            <td class="ce"><label>Sexo: <br> </label>
-                <select name="tsexo" id="isexos">
-                    <option value="X" selected>-</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Feminino</option>
-                </select>
-            </td>
-            <td class="cc"></td>
-            <td class="cd"><label for="cuf">UF de Nascimento: <br> </label>
-                <select name="tuf" id="cuf">
-                    <option value="XX" selected>-</option>
-                    
-                </select>
-            </td>
-            <tr>
-                <td class="ce">&nbsp;</td>
-                <td class="cc">&nbsp;</td>
-                <td class="cd">&nbsp;</td>
-            </tr>
-            <td class="ce"><label>Você reside em Goiânia(GO)? <br> </label>
-                <select name="tmora" id="imora">
-                    <option value="X" selected>-</option>
-                    <option value="S">Sim</option>
-                    <option value="N">Não</option>
-                </select>
-            </td>
-            <td class="cc"></td>
-            <td class="cd"><label>Cidade de Nascimento: <br> </label>
-                <select name="tcidade" id="icidade">
-                    <option value="X" selected>-</option>
-                </select>
-            </td>
-            <tr>
-                <td class="ce">&nbsp;</td>
-                <td class="cc">&nbsp;</td>
-                <td class="cd">&nbsp;</td>
-            </tr>
-            <td class="ce"><label>Estado Civil: <br> </label>
-                <select name="testciv" id="iestciv">
-                    <option value="X" selected>-</option>
-                    <option value="S">Solteiro(a)</option>
-                    <option value="C">Casado(a)</option>
-                    <option value="V">Viúvo(a)</option>
-                    <option value="D">Divorciado(a)</option>
-                    <option value="U">União Estável</option>
-                    <option value="N">Prefiro Não Informar</option>
-                </select>
-            </td>
-            <tr>
-                <td class="ce">&nbsp;</td>
-                <td class="cc">&nbsp;</td>
-                <td class="cd">&nbsp;</td>
-            </tr>
-            <tr>
-                <td><label for="">Caso você não resida em Goiânia, informe<br> a cidade onde reside: <br></label><input type="text" name="tcidade2" id="ccidade2" size="30" maxlength="30" placeholder="Nome da cidade onde reside"></td>
-            </tr>
-        </table>
-    </article>
+                <td class="cd"><label for="cuf">UF de Nascimento: <br> </label>
+                    <select name="tuf" id="cuf" class="itemselect">
+                        <option value="XX" selected>-</option>
+                    </select>
+                </td>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <td class="ce"><label>Você reside em Goiânia(GO)? <br> </label>
+                    <select name="tmora" id="imora" class="itemselect" onchange="desabilitaCampo(event)">
+                        <option value="X" selected>-</option>
+                        <option value="S">Sim</option>
+                        <option value="N">Não</option>
+                    </select>
+                </td>
+                <td class="cc"></td>
+                <td class="cd"><label>Cidade de Nascimento: <br> </label>
+                    <select name="tcidade" id="icidade" class="itemselect">
+                        <option value="X" selected>-</option>
+                    </select>
+                </td>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <td class="ce"><label>Estado Civil: <br> </label>
+                    <select name="testciv" id="iestciv" class="itemselect">
+                        <option value="X" selected>-</option>
+                        <option value="S">Solteiro(a)</option>
+                        <option value="C">Casado(a)</option>
+                        <option value="V">Viúvo(a)</option>
+                        <option value="D">Divorciado(a)</option>
+                        <option value="U">União Estável</option>
+                        <option value="N">Prefiro Não Informar</option>
+                    </select>
+                </td>
+                <td class="cc"></td>
+                <td class="cd"><label>Bairro que reside em Goiânia: <br> </label>
+                    <select name="tbairro" id="ibairro" class="itemselect" disabled>
+                        <option value="X" selected>-</option>
+                        <option value="B1">Jardim América</option>
+                        <option value="B2">Bueno</option>
+                        <option value="B3">Jardim Novo Mundo</option>
+                        <option value="B4">Jardim Guanabara</option>
+                        <option value="B5">Oeste</option>
+                        <option value="B6">Pedro Ludovico</option>
+                        <option value="B7">Centro</option>
+                        <option value="B8">Universitário</option>
+                        <option value="B9">Parque Amazônia</option>
+                        <option value="B10">Conjunto Vera Cruz</option>
+                    </select>
+                </td>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Caso você não resida em Goiânia,<br> informe a cidade onde reside: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <input type="text" name="tcidade2" id="ccidade2" size="30" maxlength="30" placeholder="Nome da cidade onde reside" disabled class="iteminput">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Renda Mensal: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <input type="text" name="trendamestotal" id="crendamestotal" class="iteminput" size="27" placeholder="Não Possuo" readonly><br>
+                        &nbsp; &nbsp; <span>Min</span> <input type="range" name="trendames" id="crendames" min="0" max="20604" step="1212" value="0" oninput="calc_total()"><span>Max</span>
+                    </td>
+                </tr>
+            </table>
+        </article>
+        <article id="pesquisa-consumidor">
+            <header>
+                <h1>Pesquisa de Consumidor</h1>
+            </header>
+            <table id="tabelaq2">
+                <tr>
+                    <td class="ce"><label>Informe a categoria que você mais consome: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <select name="tcat" id="icat" class="itemselect">
+                            <option value="X" selected>-</option>
+                            <option value="c1">Celulares</option>
+                            <option value="c2">Eletroportáteis</option>
+                            <option value="c3">Geladeiras</option>
+                            <option value="c4">Móveis</option>
+                            <option value="c5">TV e Áudio</option>
+                        </select><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Informe a marca que você mais consome: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <select name="tmarca" id="imarca" class="itemselect">
+                            <option value="X" selected>-</option>
+                            <option value="m1">Amo</option>
+                            <option value="m2">Apple</option>
+                            <option value="m3">Atlas</option>
+                            <option value="m4">Blac & Decker</option>
+                            <option value="m5">Bom Pastor</option>
+                            <option value="m6">Bon Gourmet</option>
+                            <option value="m8">Brastemp</option>
+                            <option value="m7">Britânia</option>
+                            <option value="m9">Cadence</option>
+                            <option value="m10">Casa Ambiente</option>
+                            <option value="m11">Colormaq</option>
+                            <option value="m12">Consul</option>
+                            <option value="m13">Demóbile</option>
+                            <option value="m14">DJ Móveis</option>
+                            <option value="m15">Electrolux</option>
+                            <option value="m16">ELG</option>
+                            <option value="m17">Esmaltec</option>
+                            <option value="m18">Euro Home</option>
+                            <option value="m19">Europa</option>
+                            <option value="m20">Fabri Móveis</option>
+                            <option value="m21">Fischer</option>
+                            <option value="m22">Germai</option>
+                            <option value="m23">Goodyear</option>
+                            <option value="m24">Itatiaia</option>
+                            <option value="m25">JBL</option>
+                            <option value="m26">Lenovo</option>
+                            <option value="m27">Lenoxx</option>
+                            <option value="m28">LG</option>
+                            <option value="m29">Linoforte</option>
+                            <option value="m30">Lopas</option>
+                            <option value="m31">Lyor</option>
+                            <option value="m32">Madesa</option>
+                            <option value="m33">Malory</option>
+                            <option value="m34">Mondial</option>
+                            <option value="m35">Montreal</option>
+                            <option value="m36">Motorola</option>
+                            <option value="m37">Multilaser</option>
+                            <option value="m38">Nespresso</option>
+                            <option value="m39">Ortobom</option>
+                            <option value="m40">Oxford</option>
+                            <option value="m41">Panasonic</option>
+                            <option value="m42">Philco</option>
+                            <option value="m43">Phillips</option>
+                            <option value="m44">Phillips Walita</option>
+                            <option value="m45">Positron</option>
+                            <option value="m46">Probel</option>
+                            <option value="m47">Pulse</option>
+                            <option value="m48">Rochedo</option>
+                            <option value="m49">Samsung</option>
+                            <option value="m50">Santos Andirá</option>
+                            <option value="m51">Semp Toshiba</option>
+                            <option value="m52">Sony</option>
+                            <option value="m53">Suggar</option>
+                            <option value="m54">TCL</option>
+                            <option value="m55">Vonder</option>
+                            <option value="m56">Wap</option>
+                            <option value="m57">Weego</option>
+                            <option value="m58">Wolff</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Qual o seu grau de satisfação com a marca (entre 0 e 10): <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <input type="number" name="quantidade" min="0" max="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Qual o seu grau de satisfação com o produto (entre 0 e 10): <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <input type="number" name="quantidade" min="0" max="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>De que forma você conheceu a Novo Mundo: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <select name="tcontato" id="icontato" class="itemselect">
+                            <option value="X" selected>-</option>
+                            <option value="c1">Indicação</option>
+                            <option value="c2">Instagram</option>
+                            <option value="c3">Twitter</option>
+                            <option value="c4">Facebook</option>
+                            <option value="c5">LinkedIn</option>
+                            <option value="c6">Televisão</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Qual o seu grau de satisfação com o atendimento pelos<br> funcionários da Novo Mundo (entre 0 e 10): <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <input type="number" name="quantidade" min="0" max="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Você indicaria a Novo Mundo para alguém?: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <select name="tindica" id="iindica" class="itemselect">
+                            <option value="X" selected>-</option>
+                            <option value="S">Sim</option>
+                            <option value="PS">Provavelmente sim</option>
+                            <option value="T">Talvez</option>
+                            <option value="PN">Provavelmente não</option>
+                            <option value="N">Não</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">&nbsp;</td>
+                    <td class="cc">&nbsp;</td>
+                    <td class="cd">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ce"><label>Observações: <br></label></td>
+                    <td class="cc"></td>
+                    <td class="cd">
+                        <textarea type="text" name="obs" id="obs"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </article>
+        <div id="botoes">
+            <button type="submit" name="enviar" id="bconfirmar" onclick="botao()">Finalizar Pesquisa</button>
+            <a href="home.html"><button>Voltar</button></a>
+        </div>
+        <footer id="rodape">
+            <p>Copyright 2022 Lojas Novo Mundo<sup>&reg;</sup> - novomundo.com.br<sup>&reg;</sup><br>   
+            <a href="https://facebook.com/novomundo" target="blank">Facebook</a> | <a href="https://twitter.com/novomundo" target="blank">Twitter</a> | <a href="https://instagram.com/novomundooficial" target="blank">Instagram</a></p>
+        </footer>
+    </div>
     <script lang="javascript" src="js/cities.js"></script>
+    <script lang="javascript" src="js/functions.js"></script>
 </body>
 </html>

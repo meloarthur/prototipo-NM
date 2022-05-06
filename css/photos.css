@@ -87,7 +87,7 @@
 }
 
 #album-fotos #foto-05{
-    background: url('../img/gel-1.png') no-repeat;
+    background: url('../img/elp-3.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -99,7 +99,7 @@
 }
 
 #album-fotos #foto-06{
-    background: url('../img/gel-2.png') no-repeat;
+    background: url('../img/elp-4.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -111,7 +111,7 @@
 }
 
 #album-fotos #foto-07{
-    background: url('../img/mov-1.png') no-repeat;
+    background: url('../img/gel-1.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -123,7 +123,7 @@
 }
 
 #album-fotos #foto-08{
-    background: url('../img/mov-2.png') no-repeat;
+    background: url('../img/gel-2.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -135,7 +135,7 @@
 }
 
 #album-fotos #foto-09{
-    background: url('../img/tva-1.png') no-repeat;
+    background: url('../img/mov-1.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -147,7 +147,7 @@
 }
 
 #album-fotos #foto-10{
-    background: url('../img/tva-2.png') no-repeat;
+    background: url('../img/mov-2.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -159,7 +159,7 @@
 }
 
 #album-fotos #foto-11{
-    background: url('../img/tva-3.png') no-repeat;
+    background: url('../img/mov-3.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
@@ -171,13 +171,61 @@
 }
 
 #album-fotos #foto-12{
-    background: url('../img/tva-4.png') no-repeat;
+    background: url('../img/mov-4.png') no-repeat;
     background-position: 50% 50%;
     background-size: 400px 400px;
     background-color: #ffffff;
 }
 
 #album-fotos #foto-12:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#album-fotos #foto-13{
+    background: url('../img/tva-1.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+
+#album-fotos #foto-13:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#album-fotos #foto-14{
+    background: url('../img/tva-2.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+
+#album-fotos #foto-14:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#album-fotos #foto-15{
+    background: url('../img/tva-3.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+
+#album-fotos #foto-15:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#album-fotos #foto-16{
+    background: url('../img/tva-4.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+
+#album-fotos #foto-16:hover{
     background-position: 0px 0px;
     background-size: 200px 200px;
 }

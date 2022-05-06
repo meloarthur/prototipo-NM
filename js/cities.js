@@ -2,19 +2,43 @@ const stateSelectElement = document.querySelector('#cuf');
 const citySelectElement = document.querySelector('#icidade');
 
 window.addEventListener('load', () => {
-    console.log(stateSelectElement);
   fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
   .then(res => res.json())
   .then(data => {
-    data.sort((a, b) => a.nome.localeCompare(b.nome)).forEach(item => {
-      const { sigla, nome } = item;
+    let statesByRegion = {
+      'Centro-Oeste': [],
+      'Nordeste': [],
+      'Norte': [],
+      'Sudeste': [],
+      'Sul': [],
+    };
 
-      const opt = document.createElement('option');
-      opt.setAttribute('value', sigla);
-      opt.innerHTML = nome;
+    data.forEach(item => {
+      const { sigla, nome, regiao } = item;
 
-      stateSelectElement.appendChild(opt);
-    })
+      statesByRegion[regiao.nome].push({
+        nome,
+        sigla,
+      });
+    });
+
+    Object.keys(statesByRegion).forEach(region => {
+      const optGroup = document.createElement('optgroup');
+      optGroup.setAttribute('label', region);
+
+      statesByRegion[region].sort((a, b) => a.nome.localeCompare(b.nome))
+      .forEach(state => {
+        const { nome, sigla } = state;
+
+        const opt = document.createElement('option');
+        opt.setAttribute('value', sigla);
+        opt.innerHTML = nome;
+
+        optGroup.appendChild(opt);
+      });
+
+      stateSelectElement.appendChild(optGroup);
+    });
   });
 });
 

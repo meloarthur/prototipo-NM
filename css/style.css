@@ -172,3 +172,7 @@ body{
     background-color: #606060;
     padding: 10px;
 }
+
+#lateral iframe{
+    padding-left: 23px;
+}

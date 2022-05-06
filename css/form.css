@@ -1,6 +1,19 @@
 body{
     font-family: Arial;
     font-size: 10pt;
+    background-color: #606060;
+}
+
+#interface{
+    width: 1300px;
+    background-color: #010298;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    padding: 10px 10px 10px 10px;
+}
+
+header{
+    background-color: #dddddd;
 }
 
 p{
@@ -23,7 +36,7 @@ article h2{
 }
 
 article{
-    margin-bottom: 800px;
+    margin-bottom: 32px;
 }
 
 .img-dir{
@@ -32,40 +45,70 @@ article{
     margin-left: 5px;
 }
 
-#frame-quest{
-    width: 1000px;
-    height: 600px;
-    border: none;
-    scroll-padding: unset;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-#frame-quest::-webkit-scrollbar{
-    -webkit-overflow-scrolling: touch;
-    display: none;
-}
-
-#tabelaq1{
+#tabelaq1, #tabelaq2{
     margin: 0 auto;
 }
+
 
 #dados-pessoais h1{
     text-align: center;
 }
 
-input, select{
-    width: 250px;
+#dados-pessoais header{
+    margin: 10px 0px 10px 0px;
 }
 
 h1{
     text-align: center;
+    color: #ffffff;
 }
 
-table td:last-child{
-    width: 10px;
+.itemselect{
+    width: 210px;
 }
 
-article#dados-pessoais table#tabelaq1 td.cd#td-chata{
-    display: block;
+.iteminput{
+    width: 205px;
+}
+
+/* td{
+    width: 20px;
+} */
+
+/*Características da id 'rodape'*/
+#rodape{
+    clear: both;
+    border-top: 3px solid white;
+}
+
+#rodape p{
+    text-align: center;
+    color: white;
+}
+
+#rodape a{
+    text-align: center;
+    color: white;
+}
+
+label, span{
+    color: white;
+}
+
+#tabelaq2 #obs{
+    height: 160px;
+    width: 210px;
+}
+
+#tabelaq2 label{
+    width: 205px;
+}
+
+#bconfirmar{
+    margin: 0 auto;
+}
+
+#botoes{
+    text-align: center;
+    margin-bottom: 24px;
 }
